@@ -1,22 +1,7 @@
 # netlify.toml
 
-# Build settings
-[build]
-   command = "npm run build" # Replace with your build command
-   publish = "dist" # Replace with the directory to publish
-
 # Redirects and rewrites
 [[redirects]]
    from = "/*"
    to = "/index.html"
    status = 200
-
-# Headers
-[[headers]]
-   for = "/*"
-   [headers.values]
-      Cache-Control = "public, max-age=0, must-revalidate"
-
-# Environment variables
-[build.environment]
-   NODE_ENV = "production" # Replace with your desired environment variables
